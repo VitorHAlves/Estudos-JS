@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 02</title>
+</head>
+<body>
+    <script>
+        let numero = prompt("Digite um número inteiro.");
+        let primo = true;
+        if (numero <= 1){
+            primo = false;
+        }
+        for(let div = 2; div < numero; div++){
+            if(numero % div == 0){
+                primo = false;
+                break;
+            }
+        }
+        if(primo){
+            alert("O número é primo");
+        }
+        else{
+            alert("O número não é primo");
+        }
+    </script>
+</body>
+</html>
