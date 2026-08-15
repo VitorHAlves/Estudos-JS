@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 04</title>
+</head>
+<body>
+    <script>
+        let entrada = prompt("Digite um dado: ");
+        let dado;
+        let opc = prompt("Deseja verificar o tipo do dado? (S/N)");
+        if (opc == "S"){
+            if(entrada != "" && !isNaN(entrada)){
+                dado = Number(entrada);
+                document.write(typeof dado);
+            }
+            else{
+                dado = entrada;
+                document.write(typeof dado);
+            }
+        } else{
+            document.write("Obrigado por visitar essa pagina!");
+        }
+
+    </script>
+</body>
+</html>
