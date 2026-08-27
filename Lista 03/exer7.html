@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        function verificarResposta(respostaUsuario, respostaCorreta){
+            return respostaUsuario.trim().toLowerCase() == respostaCorreta.toLowerCase();// trim() remove os espaços no começo e no fim
+        }
+        const pergunta = "Em qual cidade eu moro?";
+        const respostaCerta = "Presidente Prudente";
+
+        const entrada = prompt(pergunta);
+
+        if (entrada != null){
+            if(verificarResposta(entrada,respostaCerta)){
+                alert("Resposta Correta!");
+            } else{
+                alert("Tente Novamente!");
+            }
+        }
+    </script>
+</body>
+</html>
