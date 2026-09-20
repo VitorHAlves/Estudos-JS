@@ -1,0 +1,345 @@
+
+:root {
+  --parchment: #f1e6c8;
+  --parchment-dark: #e2d1a3;
+  --ink: #2b2013;
+  --ink-soft: #5a4a30;
+  --navy: #16243d;
+  --navy-light: #26395c;
+  --gold: #b8863b;
+  --gold-bright: #d9a94d;
+  --seal-red: #7a2e2e;
+  --line: rgba(43, 32, 19, 0.18);
+
+  --font-display: "IM Fell English SC", serif;
+  --font-body-serif: "IM Fell English", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--navy);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.ocean-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at top, var(--navy-light) 0%, var(--navy) 55%, #0c1526 100%);
+}
+
+.ocean-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+
+.logbook {
+  max-width: 620px;
+  background: var(--parchment);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(184, 134, 59, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(122, 46, 46, 0.06), transparent 45%);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2.75rem 2.5rem 2.25rem;
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.55),
+    0 0 0 8px rgba(241, 230, 200, 0.06);
+  position: relative;
+}
+
+.logbook::before {
+
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  bottom: 18px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--line) 15%, var(--line) 85%, transparent);
+}
+
+
+.logbook-header {
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.25rem;
+}
+
+.logbook-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logbook-subtitle {
+  font-family: var(--font-body-serif);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+.add-row {
+  display: flex;
+  gap: 0.6rem;
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.65rem 0.9rem;
+  color: var(--ink);
+}
+
+.task-input:focus {
+  background: #fff;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184, 134, 59, 0.2);
+}
+
+.btn-selar {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  background: var(--seal-red);
+  color: #f4e9d8;
+  border: none;
+  border-radius: 3px;
+  padding: 0.65rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-selar:hover {
+  background: #8f3737;
+  transform: translateY(-1px);
+}
+
+.btn-selar:active {
+  transform: translateY(0);
+}
+
+.selo {
+  font-size: 1rem;
+}
+
+
+.tally {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 0.6rem;
+}
+
+
+.task-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.task-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.65rem 0.75rem;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.task-entry:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.task-entry.concluida {
+  background: rgba(184, 134, 59, 0.1);
+}
+
+.task-entry.concluida .task-text {
+  text-decoration: line-through;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+
+.check-btn {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 0.1rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: transparent;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.check-btn:hover {
+  background: rgba(184, 134, 59, 0.15);
+}
+
+.task-entry.concluida .check-btn {
+  background: var(--gold);
+  color: var(--parchment);
+}
+
+.task-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink-soft);
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--navy);
+  background: #fff;
+}
+
+.btn-excluir:hover {
+  border-color: var(--seal-red);
+  color: var(--seal-red);
+}
+
+
+.empty-state {
+  padding: 2rem 1.25rem 0.5rem;
+  color: var(--ink-soft);
+  font-family: var(--font-body-serif);
+  font-style: italic;
+}
+
+.empty-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  opacity: 0.7;
+}
+
+
+.sign-off {
+  font-family: var(--font-body-serif);
+  font-style: italic;
+  color: rgba(241, 230, 200, 0.55);
+  margin-top: 1.75rem;
+  font-size: 0.95rem;
+}
+
+
+@media (max-width: 576px) {
+  .logbook {
+    padding: 2rem 1.25rem 1.75rem;
+    border-radius: 0;
+  }
+
+  .logbook-title {
+    font-size: 2.3rem;
+  }
+
+  .add-row {
+    flex-direction: column;
+  }
+
+  .btn-selar {
+    justify-content: center;
+  }
+}
+
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
