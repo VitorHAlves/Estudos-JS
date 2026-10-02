@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Apenas uma <div> principal conforme solicitado -->
+    <div id="calculadora-principal" class="calculator">
+        <div class="window-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="display-container">
+            <div id="historico" class="history"></div>
+            <div id="display" class="display">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn function" onclick="limpar()">AC</button>
+            <button class="btn function" onclick="inverterSinal()">+/-</button>
+            <button class="btn function" onclick="porcentagem()">%</button>
+            <button id="btn-div" class="btn operator" onclick="definirOperacao('÷')">÷</button>
+            
+            <button class="btn" onclick="inserirNumero('7')">7</button>
+            <button class="btn" onclick="inserirNumero('8')">8</button>
+            <button class="btn" onclick="inserirNumero('9')">9</button>
+            <button id="btn-mult" class="btn operator" onclick="definirOperacao('×')">×</button>
+            
+            <button class="btn" onclick="inserirNumero('4')">4</button>
+            <button class="btn" onclick="inserirNumero('5')">5</button>
+            <button class="btn" onclick="inserirNumero('6')">6</button>
+            <button id="btn-sub" class="btn operator" onclick="definirOperacao('-')">-</button>
+            
+            <button class="btn" onclick="inserirNumero('1')">1</button>
+            <button class="btn" onclick="inserirNumero('2')">2</button>
+            <button class="btn" onclick="inserirNumero('3')">3</button>
+            <button id="btn-soma" class="btn operator" onclick="definirOperacao('+')">+</button>
+            
+            <button class="btn zero" onclick="inserirNumero('0')">0</button>
+            <button class="btn" onclick="inserirDecimal()">,</button>
+            <button class="btn operator" onclick="calcular()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
