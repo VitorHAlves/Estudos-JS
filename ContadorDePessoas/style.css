@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.contador-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.contador-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.total-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.total-section h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.total-section span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.grupo-contador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fdfdfd;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.grupo-contador .label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4a5568;
+    text-align: left;
+}
+
+.grupo-contador .valor {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748;
+    width: 40px;
+    text-align: center;
+}
+
+.botoes-grupo {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #2d3748;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-reset {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #c53030;
+}

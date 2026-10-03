@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Pessoas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contador-container">
+        <h1>Contador de Pessoas</h1>
+
+        <div class="total-section">
+            <h2>Total</h2>
+            <span id="total-geral">0</span>
+        </div>
+
+        <div class="grupo-contador">
+            <span class="label">Homens</span>
+            <span id="valor-homens" class="valor">0</span>
+            <div class="botoes-grupo">
+                <button class="btn" onclick="alterar('homens', -1)">-</button>
+                <button class="btn" onclick="alterar('homens', 1)">+</button>
+            </div>
+        </div>
+
+        <div class="grupo-contador">
+            <span class="label">Mulheres</span>
+            <span id="valor-mulheres" class="valor">0</span>
+            <div class="botoes-grupo">
+                <button class="btn" onclick="alterar('mulheres', -1)">-</button>
+                <button class="btn" onclick="alterar('mulheres', 1)">+</button>
+            </div>
+        </div>
+
+        <button class="btn-reset" onclick="zerar()">Zerar Tudo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
