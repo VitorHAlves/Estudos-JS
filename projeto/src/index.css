@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: #203d36; background: #fafbf8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 3px solid #9b6ec8; outline-offset: 5px; }
+::selection { background: #d4edb3; color: #203d36; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
